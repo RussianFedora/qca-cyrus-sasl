@@ -1,6 +1,6 @@
 Name:           qca-cyrus-sasl
 Version:        2.0.0
-Release:        beta3.1%{?dist}.R
+Release:        beta3.2%{?dist}
 Summary:        QCA Cyrus SASL plugin
 
 License:        GPLv2
@@ -8,7 +8,8 @@ URL:            http://delta.affinix.com/qca/
 Source0:        http://delta.affinix.com/download/qca/2.0/plugins/%{name}-%{version}-beta3.tar.bz2
 
 BuildRequires:  qca2-devel
-BuildRequires:  cyrus-sasl-devel       
+BuildRequires:  cyrus-sasl-devel
+BuildRequires:  qt-devel
 
 %description
 This plugin provides features based on Cyrus SASL version 2.
@@ -34,5 +35,8 @@ make install INSTALL_ROOT=$RPM_BUILD_ROOT
 
 
 %changelog
+* Tue Aug 16 2011 Vasiliy N. Glazov <vascom2@gmail.com> 2.0.0-beta3.2.R
+- rebuild
+
 * Tue Aug 16 2011 Vasiliy N. Glazov <vascom2@gmail.com> 2.0.0-beta3.1.R
 - Initial release
